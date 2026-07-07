@@ -3,11 +3,11 @@
 #include <memory>
 #include <string>
 
-#include "ui/inputhandler/ConsoleInputHandler.h"
-#include "ui/renderer/ConsoleRenderer.h"
+#include "ui/console/ConsoleInputHandler.h"
+#include "ui/console/ConsoleRenderer.h"
 #include "core/Game.h"
-#include "ui/inputhandler/IInputHandler.h"
-#include "ui/renderer/IRenderer.h"
+#include "ui/IInputHandler.h"
+#include "ui/IRenderer.h"
 
 int main() {
     Game game;

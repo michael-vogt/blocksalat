@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IInputHandler.h"
+#include "../IInputHandler.h"
 
 // Blockierende, Enter-basierte Konsoleneingabe (Platzhalter, siehe main.cpp-
 // Kommentare zur Einschraenkung von Standard-C++ bei Tastatureingaben).

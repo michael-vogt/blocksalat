@@ -2,7 +2,7 @@
 
 #include <optional>
 
-#include "../../core/Game.h"
+#include "../core/Game.h"
 
 // ---------------------------------------------------------------------------
 // IInputHandler

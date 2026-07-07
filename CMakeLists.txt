@@ -22,15 +22,15 @@ target_include_directories(BlockSalatCore PUBLIC
 )
 
 add_library(BlockSalatUIConsole STATIC
-		src/ui/inputhandler/ConsoleInputHandler.cpp
-		src/ui/renderer/ConsoleRenderer.cpp
+		src/ui/console/ConsoleInputHandler.cpp
+		src/ui/console/ConsoleRenderer.cpp
 )
 
 target_include_directories(BlockSalatUIConsole PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 add_library(BlockSalatUIQt STATIC
-		src/ui/inputhandler/ConsoleInputHandler.cpp
-		src/ui/renderer/ConsoleRenderer.cpp
+		src/ui/console/ConsoleInputHandler.cpp
+		src/ui/console/ConsoleRenderer.cpp
 )
 
 target_include_directories(BlockSalatUIQt PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
@@ -39,7 +39,7 @@ target_include_directories(BlockSalatUIQt PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src
 
 
 if(BUILD_CONSOLE)
-	add_executable(BlockSalatConsole src/main.cpp)
+	add_executable(BlockSalatConsole src/main_console.cpp)
 	target_link_libraries(BlockSalatConsole PRIVATE
 			BlockSalatCore
 			BlockSalatUIConsole
@@ -53,7 +53,7 @@ if (BUILD_QT)
 	set(CMAKE_AUTOUIC ON)
 	set(CMAKE_AUTORCC ON)
 
-	add_executable(BlockSalatQt src/main.cpp)
+	add_executable(BlockSalatQt src/main_qt.cpp)
 
 	target_link_libraries(BlockSalatQt PRIVATE
 			BlockSalatCore
